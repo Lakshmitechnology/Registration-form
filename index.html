@@ -1,98 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head >
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./src/style.css">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./src/style.css">
 </head>
-<body class="bg-[url('../image/bg.jpg')] bg-cover bg-center bg-no-repeat min-h-screen">
-    <h1 class="text-center text-red-500 text-5xl font-bold mb-5 mt-7">Registartion Form</h1>
-    
-   <form onsubmit="return validationform()" class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-lg space-y-5 mt-7" >
 
-  <p class="flex flex-col">
-    <label for="name" class="mb-2 font-semibold text-gray-700">Name</label>
-    <input
-      type="text"
+<body class="">
+  <h1 class="text-center text-white text-5xl font-bold mb-5 mt-7">Registartion Form</h1>
+  <form onsubmit="return validationform()" class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-lg space-y-5 mt-7">
+    <p class="flex flex-col">
+      <label for="name" class="mb-2 font-semibold text-gray-700">Name</label>
+      <input type="text" id="name" placeholder="Enter your Name"
+        class="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
+      <span id="name-error" class="text-red-500 text-sm mt-1"></span>
+    </p>
 
-      id="name"
-      placeholder="Enter your Name"
-      class="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
-    >
-    <span id="name-error" class="text-red-500 text-sm mt-1"></span>
-  </p>
+    <p class="flex flex-col">
+      <label for="address" class="mb-2 font-semibold text-gray-700">Address</label>
+      <input type="text" id="address" placeholder="Enter your Address"
+        class="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
+      <span id="address-error" class="text-red-500 text-sm mt-1"></span>
+    </p>
 
-  <p class="flex flex-col">
-    <label for="address" class="mb-2 font-semibold text-gray-700">Address</label>
-    <input
-      type="text"
-      id="address"
-      placeholder="Enter your Address"
-      class="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
-    >
-    <span id="address-error" class="text-red-500 text-sm mt-1"></span>
-  </p>
+    <p class="flex flex-col">
+      <label for="email" class="mb-2 font-semibold text-gray-700">Email</label>
+      <input type="email" id="email" placeholder="Enter your Email"
+        class="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
+      <span id="email-error" class="text-red-500 text-sm mt-1"></span>
+    </p>
 
-  <p class="flex flex-col">
-    <label for="email" class="mb-2 font-semibold text-gray-700">Email</label>
-    <input
-      type="email"
-      id="email"
-      placeholder="Enter your Email"
-      class="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
-    >
-    <span id="email-error" class="text-red-500 text-sm mt-1"></span>
-  </p>
+    <p class="flex flex-col">
+      <label for="password" class="mb-2 font-semibold text-gray-700">Password</label>
+      <input type="password" id="password" placeholder="Enter your Password"
+        class="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
+      <span id="password-error" class="text-red-500 text-sm mt-1"></span>
+    </p>
 
-  <p class="flex flex-col">
-    <label for="password" class="mb-2 font-semibold text-gray-700">Password</label>
-    <input
-      type="password"
-      id="password"
-      placeholder="Enter your Password"
-      class="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
-    >
-    <span id="password-error" class="text-red-500 text-sm mt-1"></span>
-  </p>
+    <p class="flex flex-col">
+      <label for="subject" class="mb-2 font-semibold text-gray-700">Select Your Course</label>
+      <select id="subject"
+        class="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
+        <option value="">Select Course</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="BCA">BCA</option>
+        <option value="I.Tech">I.Tech</option>
+        <option value="MCA">MCA</option>
+      </select>
+      <span id="subject-error" class="text-red-500 text-sm mt-1"></span>
+    </p>
 
-  <p class="flex flex-col">
-    <label for="subject" class="mb-2 font-semibold text-gray-700">Select Your Course</label>
-    <select
-      id="subject"
-      class="border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
-    >
-      <option value="">Select Course</option>
-<option value="B.Tech">B.Tech</option>
-<option value="BCA">BCA</option>
-<option value="I.Tech">I.Tech</option>
-<option value="MCA">MCA</option>
-    </select>
-   <span id="subject-error" class="text-red-500 text-sm mt-1"></span>
-  </p>
+    <div class="flex items-center gap-2">
+      <input type="checkbox" id="agree" class="w-4 h-4">
+      <label for="agree" class="text-gray-700">
+        I agree to the above information
+      </label>
+      <span id="agree-error" class="text-red-500 text-sm mt-1"></span>
+    </div>
 
-  <div class="flex items-center gap-2">
-    <input type="checkbox" id="agree" class="w-4 h-4">
-    <label for="agree" class="text-gray-700">
-      I agree to the above information
-    </label>
-     <span id="agree-error" class="text-red-500 text-sm mt-1"></span>
-  </div>
+    <div class="flex gap-4">
+      <input type="submit" value="Send"
+        class="bg-amber-500 text-white px-6 py-2 rounded-md hover:bg-amber-600 cursor-pointer">
 
-  <div class="flex gap-4">
-    <input
-      type="submit"
-      value="Send"
-      class="bg-amber-500 text-white px-6 py-2 rounded-md hover:bg-amber-600 cursor-pointer"
-    >
+      <input type="reset" value="Reset"
+        class="bg-gray-500 text-white px-6 py-2 rounded-md hover:bg-gray-600 cursor-pointer">
+    </div>
 
-    <input
-      type="reset"
-      value="Reset"
-      class="bg-gray-500 text-white px-6 py-2 rounded-md hover:bg-gray-600 cursor-pointer"
-    >
-  </div>
-
-</form>
-
-
+  </form>
